@@ -5,7 +5,11 @@ build/
 !**/src/test/**/build/
 
 ### IntelliJ IDEA ###
-../.idea
+.idea/workspace.xml
+.idea/vcs.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/java-project-61.iml
 ../.idea/
 .idea/
 *.iws
