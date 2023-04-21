@@ -9,7 +9,10 @@ build/
 .idea/vcs.xml
 .idea/modules.xml
 .idea/misc.xml
+<<<<<<< HEAD
 .idea/java-project-61.iml
+=======
+>>>>>>> b4fb827 (fix .gitignore)
 ../.idea/
 .idea/
 *.iws
