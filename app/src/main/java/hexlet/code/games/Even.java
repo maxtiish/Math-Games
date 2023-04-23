@@ -1,48 +1,29 @@
 package hexlet.code.games;
 
 import java.util.Random;
-import java.util.Scanner;
+import hexlet.code.Engine;
+
 public class Even {
-    public static void isEven() {
-        Scanner scanner1 = new Scanner(System.in);
+    public static void even() {
+        var task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
-        String userName = scanner1.next();
-        System.out.println("Hello, " + userName + "!");
-
-        final Random random = new Random();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
+        String[][] questions = new String[3][2];
 
         var i = 0;
 
         while (i < 3) {
-            var randomNum = random.nextInt(1000);
-            System.out.println("Question: " + randomNum);
-            System.out.print("Your choice: ");
-            String answer = scanner.next();
-
-            if (randomNum % 2 == 0 && answer.equals("yes")) {
-                System.out.println("Correct!");
+            final Random random = new Random();
+            var num = random.nextInt(1000);
+            questions[i][0] = Integer.toString(num);
+            if (num % 2 == 0) {
+                questions[i][1] = "yes";
                 i++;
-            } else if (randomNum % 2 == 0 && !answer.equals("yes")) {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'yes'.");
-                System.out.println("Let's try again, " + userName + "!");
-                break;
-            }
-
-            if (randomNum % 2 != 0 && answer.equals("no")) {
-                System.out.println("Correct!");
+            } else {
+                questions[i][1] = "no";
                 i++;
-            } else if (randomNum % 2 != 0 && !answer.equals("no")) {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was 'no'.");
-                System.out.println("Let's try again, " + userName + "!");
-                break;
             }
         }
-        if (i == 3) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        Engine.engine(task, questions);
     }
 }
+

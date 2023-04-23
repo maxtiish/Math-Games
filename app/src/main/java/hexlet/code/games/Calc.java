@@ -1,59 +1,46 @@
 package hexlet.code.games;
 
-import java.util.Scanner;
+import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
     public static void calc() {
-        Scanner scanner = new Scanner(System.in);
+        var task = "What is the result of the expression?";
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
-        final Random random = new Random();
-        Scanner scanner1 = new Scanner(System.in);
-        System.out.println("What is the result of the expression?");
+        String[][] questions = new String[3][2];
 
         var i = 0;
 
+        var sum = 0;
+
         while (i < 3) {
+            final Random random = new Random();
             char[] operations = {'+', '-', '*'};
             var randomOperation = random.nextInt(3);
             var randomNum = random.nextInt(1, 15);
             var secondRandomNum = random.nextInt(1, 15);
-
-            System.out.println("Question: " + randomNum + operations[randomOperation] + secondRandomNum);
-            System.out.print("Your answer: ");
-            var answer = scanner.nextInt();
-
-            var problem = randomNum + operations[randomOperation] + secondRandomNum;
-            var sum = 0;
-
+            var text = Integer.toString(randomNum) + operations[randomOperation] + Integer.toString(secondRandomNum);
+            questions[i][0] = text;
             switch (randomOperation) {
                 case 0:
                     sum = randomNum + secondRandomNum;
+                    questions[i][1] = Integer.toString(sum);
+                    i++;
                     break;
                 case 1:
                     sum = randomNum - secondRandomNum;
+                    questions[i][1] = Integer.toString(sum);
+                    i++;
                     break;
                 case 2:
                     sum = randomNum * secondRandomNum;
+                    questions[i][1] = Integer.toString(sum);
+                    i++;
                     break;
-            }
-            if (sum == answer) {
-                System.out.println("Correct!");
-                i++;
-            } else {
-                System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + sum + "'.");
-                System.out.println("Let's try again, " + userName + "!");
-                break;
+                default:
+                    sum = 0;
             }
         }
-        scanner.close();
-        if (i == 3) {
-            System.out.println("Congratulations, " + userName + "!");
-        }
+        Engine.engine(task, questions);
     }
 }
