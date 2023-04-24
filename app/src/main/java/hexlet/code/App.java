@@ -25,16 +25,22 @@ public class App {
         switch (num) {
             case 1:
                 Cli.greeting();
+                break;
             case 2:
                 Even.even();
+                break;
             case 3:
                 Calc.calc();
+                break;
             case 4:
                 Gcd.gcd();
+                break;
             case 5:
                 Progression.progression();
+                break;
             case 6:
                 Prime.prime();
+                break;
             default:
                 break;
         }
