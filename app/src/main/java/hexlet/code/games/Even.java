@@ -6,7 +6,6 @@ import hexlet.code.Engine;
 public class Even {
     public static void even() {
         var task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-
         String[][] questions = new String[3][2];
 
         var i = 0;

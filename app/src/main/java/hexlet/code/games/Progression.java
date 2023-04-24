@@ -1,13 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 public class Progression {
     public static void progression() {
         var task = "What number is missing in the progression?";
-
         String[][] questions = new String[3][2];
 
         var i = 0;
