@@ -10,7 +10,7 @@ public class Prime {
 
         for (var count = 0; count < 3; count++) {
             final Random random = new Random();
-            var num = random.nextInt(2,200);
+            var num = random.nextInt(2, 200);
             questions[count][0] = Integer.toString(num);
             questions[count][1] = "yes";
 
