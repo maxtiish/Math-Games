@@ -6,7 +6,7 @@ public final class Engine {
     public static void engine(String task, String[][] questions) {
         Scanner name = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
-        System.out.println("May I have your name?");
+        System.out.print("May I have your name? ");
         String userName = name.next();
         System.out.println("Hello, " + userName + "!");
 
