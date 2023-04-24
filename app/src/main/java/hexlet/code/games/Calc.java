@@ -10,12 +10,13 @@ public class Calc {
 
         char[] operations = {'+', '-', '*'};
         var result = 0;
+        var boundForNums = 15;
 
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < questions.length; i++) {
             final Random random = new Random();
-            var randomOperation = random.nextInt(3);
-            var randomNum = random.nextInt(1, 15);
-            var secondRandomNum = random.nextInt(1, 15);
+            var randomOperation = random.nextInt(questions.length);
+            var randomNum = random.nextInt(boundForNums);
+            var secondRandomNum = random.nextInt(boundForNums);
             var text = Integer.toString(randomNum) + " " + operations[randomOperation] + " " + (secondRandomNum);
             questions[i][0] = text;
 

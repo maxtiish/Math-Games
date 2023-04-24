@@ -11,12 +11,13 @@ public class Gcd {
         String[][] questions = new String[3][2];
 
         var i = 0;
+        var bound = 100;
 
-        while (i < 3) {
+        while (i < questions.length) {
             BigInteger result;
             final Random random = new Random();
-            var firstRandomNum = random.nextInt(100);
-            var secondRandomNum = random.nextInt(100);
+            var firstRandomNum = random.nextInt(bound);
+            var secondRandomNum = random.nextInt(bound);
 
             String firstNum = Integer.toString(firstRandomNum);
             String secondNum = Integer.toString(secondRandomNum);

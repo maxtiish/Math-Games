@@ -8,9 +8,11 @@ public class Prime {
         var task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
         String[][] questions = new String[3][2];
 
-        for (var count = 0; count < 3; count++) {
+        var bound = 200;
+
+        for (var count = 0; count < questions.length; count++) {
             final Random random = new Random();
-            var num = random.nextInt(2, 200);
+            var num = random.nextInt(bound);
             questions[count][0] = Integer.toString(num);
             questions[count][1] = "yes";
 

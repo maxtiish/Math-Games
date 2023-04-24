@@ -9,10 +9,11 @@ public class Even {
         String[][] questions = new String[3][2];
 
         var i = 0;
+        var bound = 1000;
 
-        while (i < 3) {
+        while (i < questions.length) {
             final Random random = new Random();
-            var num = random.nextInt(1000);
+            var num = random.nextInt(bound);
             questions[i][0] = Integer.toString(num);
             if (num % 2 == 0) {
                 questions[i][1] = "yes";
