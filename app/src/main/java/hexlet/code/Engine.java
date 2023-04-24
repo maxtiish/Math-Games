@@ -15,7 +15,7 @@ public final class Engine {
 
         var i = 0;
 
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < questions.length; i++) {
             System.out.println("Question: " + questions[i][0]);
             System.out.print("Your answer: ");
             String answer = scanner.next();
@@ -31,7 +31,7 @@ public final class Engine {
 
         }
 
-        if (i == 3) {
+        if (i == questions.length) {
             System.out.println("Congratulations, " + userName + "!");
         }
     }
