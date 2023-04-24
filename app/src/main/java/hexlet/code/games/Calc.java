@@ -9,7 +9,7 @@ public class Calc {
         String[][] questions = new String[3][2];
 
         char[] operations = {'+', '-', '*'};
-        var sum = 0;
+        var result = 0;
 
         for (var i = 0; i < 3; i++) {
             final Random random = new Random();
@@ -20,13 +20,13 @@ public class Calc {
             questions[i][0] = text;
 
             if (randomOperation == 0) {
-                sum = Math.addExact(randomNum, secondRandomNum);
+                result = randomNum + secondRandomNum;
             } else if (randomOperation == 1) {
-                sum = randomNum - secondRandomNum;
+                result = randomNum - secondRandomNum;
             } else {
-                sum = Math.multiplyExact(randomNum, secondRandomNum);
+                result = randomNum * secondRandomNum;
             }
-            questions[i][1] = Integer.toString(sum);
+            questions[i][1] = Integer.toString(result);
         }
         Engine.engine(task, questions);
     }
