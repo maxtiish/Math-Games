@@ -6,3 +6,5 @@
 https://asciinema.org/a/Gm6xYjw7MKFy9pGvQgUGlBXts
 ### Game 'Calc':
 https://asciinema.org/a/x4NmwRrcbJlzVNt3RHWQdLUO0
+### Game 'GCD':
+https://asciinema.org/a/fZtyakY1mKcM6Ze4YXpXeIYiC
