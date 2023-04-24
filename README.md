@@ -8,3 +8,5 @@ https://asciinema.org/a/Gm6xYjw7MKFy9pGvQgUGlBXts
 https://asciinema.org/a/x4NmwRrcbJlzVNt3RHWQdLUO0
 ### Game 'GCD':
 https://asciinema.org/a/fZtyakY1mKcM6Ze4YXpXeIYiC
+### Game 'Progression':
+https://asciinema.org/a/6uDHl3dLIRDO9DPXqLKG16ILU
