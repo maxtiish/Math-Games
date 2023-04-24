@@ -6,17 +6,22 @@ import java.util.Random;
 public class Calc {
     public static void calc() {
         var task = "What is the result of the expression?";
-        String[][] questions = new String[3][2];
+
+        var numOfTasks = 3;
+
+        String[][] questions = new String[numOfTasks][2];
 
         char[] operations = {'+', '-', '*'};
+
+        var boundForNum = 15;
+
         var result = 0;
-        var boundForNums = 15;
 
         for (var i = 0; i < questions.length; i++) {
             final Random random = new Random();
             var randomOperation = random.nextInt(questions.length);
-            var randomNum = random.nextInt(boundForNums);
-            var secondRandomNum = random.nextInt(boundForNums);
+            var randomNum = random.nextInt(boundForNum);
+            var secondRandomNum = random.nextInt(boundForNum);
             var text = Integer.toString(randomNum) + " " + operations[randomOperation] + " " + (secondRandomNum);
             questions[i][0] = text;
 
