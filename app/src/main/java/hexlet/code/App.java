@@ -22,27 +22,18 @@ public class App {
         System.out.print("Your choice: ");
         int num = scanner.nextInt();
 
-        switch (num) {
-            case 1:
-                Cli.greeting();
-                break;
-            case 2:
-                Even.even();
-                break;
-            case 3:
-                Calc.calc();
-                break;
-            case 4:
-                Gcd.gcd();
-                break;
-            case 5:
-                Progression.progression();
-                break;
-            case 6:
-                Prime.prime();
-                break;
-            default:
-                break;
+        if (num == 1) {
+            Cli.greeting();
+        } else if (num == 2) {
+            Even.even();
+        } else if (num == 3) {
+            Calc.calc();
+        } else if (num == 4) {
+            Gcd.gcd();
+        } else if (num == 5) {
+            Progression.progression();
+        } else if (num == 6) {
+            Prime.prime();
         }
         scanner.close();
     }
