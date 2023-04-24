@@ -7,14 +7,13 @@ public class Progression {
     public static void progression() {
         var task = "What number is missing in the progression?";
 
-        var numOfTasks = 3;
-
-        String[][] questions = new String[numOfTasks][2];
+        final int numberOfTasks = 3;
+        String[][] questions = new String[numberOfTasks][2];
 
         var i = 0;
 
-        var boundForNum = 20;
-        var boundForDifference = 10;
+        final int boundForNum = 20;
+        final int boundForDifference = 10;
 
         while (i < questions.length) {
             final Random random = new Random();

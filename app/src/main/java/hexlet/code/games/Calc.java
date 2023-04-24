@@ -7,13 +7,12 @@ public class Calc {
     public static void calc() {
         var task = "What is the result of the expression?";
 
-        var numOfTasks = 3;
-
-        String[][] questions = new String[numOfTasks][2];
+        final int numberOfTasks = 3;
+        String[][] questions = new String[numberOfTasks][2];
 
         char[] operations = {'+', '-', '*'};
 
-        var boundForNum = 15;
+        final int boundForNum = 15;
 
         var result = 0;
 

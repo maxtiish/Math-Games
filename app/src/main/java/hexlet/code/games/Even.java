@@ -7,14 +7,13 @@ public class Even {
     public static void even() {
         var task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-        var numOfTasks = 3;
-
-        String[][] questions = new String[numOfTasks][2];
+        final int numberOfTasks = 3;
+        String[][] questions = new String[numberOfTasks][2];
 
         var i = 0;
+        final int bound = 1000;
 
         while (i < questions.length) {
-            var bound = 1000;
             final Random random = new Random();
             var num = random.nextInt(bound);
             questions[i][0] = Integer.toString(num);

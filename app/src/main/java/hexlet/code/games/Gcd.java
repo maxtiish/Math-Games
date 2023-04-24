@@ -8,7 +8,9 @@ import java.math.BigInteger;
 public class Gcd {
     public static void gcd() {
         var task = "Find the greatest common divisor of given numbers.";
-        String[][] questions = new String[3][2];
+
+        final int numberOfTasks = 3;
+        String[][] questions = new String[numberOfTasks][2];
 
         final int bound = 100;
 
