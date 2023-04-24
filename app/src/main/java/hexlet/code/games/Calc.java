@@ -16,7 +16,7 @@ public class Calc {
             var randomOperation = random.nextInt(3);
             var randomNum = random.nextInt(1, 15);
             var secondRandomNum = random.nextInt(1, 15);
-            var text = Integer.toString(randomNum) + operations[randomOperation] + Integer.toString(secondRandomNum);
+            var text = Integer.toString(randomNum) + " " + operations[randomOperation] + " " + (secondRandomNum);
             questions[i][0] = text;
 
             if (randomOperation == 0) {
