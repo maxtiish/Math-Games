@@ -22,7 +22,7 @@ public class Calc {
             if (randomOperation == 0) {
                 sum = Math.addExact(randomNum, secondRandomNum);
             } else if (randomOperation == 1) {
-                sum = Math.addExact(randomNum, -secondRandomNum);
+                sum = randomNum - secondRandomNum;
             } else {
                 sum = Math.multiplyExact(randomNum, secondRandomNum);
             }
