@@ -9,10 +9,9 @@ public class Calc {
         String[][] questions = new String[3][2];
 
         char[] operations = {'+', '-', '*'};
-        var i = 0;
         var sum = 0;
 
-        while (i < 3) {
+        for (var i = 0; i < 3; i++) {
             final Random random = new Random();
             var randomOperation = random.nextInt(3);
             var randomNum = random.nextInt(1, 15);
@@ -20,25 +19,14 @@ public class Calc {
             var text = Integer.toString(randomNum) + operations[randomOperation] + Integer.toString(secondRandomNum);
             questions[i][0] = text;
 
-            switch (randomOperation) {
-                case 0:
-                    sum = randomNum + secondRandomNum;
-                    questions[i][1] = Integer.toString(sum);
-                    i++;
-                    break;
-                case 1:
-                    sum = randomNum - secondRandomNum;
-                    questions[i][1] = Integer.toString(sum);
-                    i++;
-                    break;
-                case 2:
-                    sum = randomNum * secondRandomNum;
-                    questions[i][1] = Integer.toString(sum);
-                    i++;
-                    break;
-                default:
-                    sum = 0;
+            if (randomOperation == 0) {
+                sum = Math.addExact(randomNum, secondRandomNum);
+            } else if (randomOperation == 1) {
+                sum = Math.addExact(randomNum, -secondRandomNum);
+            } else {
+                sum = Math.multiplyExact(randomNum, secondRandomNum);
             }
+            questions[i][1] = Integer.toString(sum);
         }
         Engine.engine(task, questions);
     }
