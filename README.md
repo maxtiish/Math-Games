@@ -10,3 +10,5 @@ https://asciinema.org/a/x4NmwRrcbJlzVNt3RHWQdLUO0
 https://asciinema.org/a/fZtyakY1mKcM6Ze4YXpXeIYiC
 ### Game 'Progression':
 https://asciinema.org/a/6uDHl3dLIRDO9DPXqLKG16ILU
+### Game 'Prime':
+https://asciinema.org/a/TGpVlKJ7f0x6ka6E8KqEjoDto
