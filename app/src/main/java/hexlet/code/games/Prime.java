@@ -3,9 +3,11 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void runPrime() {
-        var task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static String getTask() {
+        return "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    }
 
+    public static String[][] getQuestions() {
         String[][] questions = new String[Engine.getCount()][2];
 
         final int from = 1;
@@ -23,6 +25,9 @@ public class Prime {
                 }
             }
         }
-        Engine.runEngine(task, questions);
+        return questions;
+    }
+    public static void runPrime() {
+        Engine.runEngine(getTask(), getQuestions());
     }
 }

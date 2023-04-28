@@ -4,9 +4,10 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Progression {
-    public static void runProgression() {
-        var task = "What number is missing in the progression?";
-
+    public static String getTask() {
+        return "What number is missing in the progression?";
+    }
+    public static String[][] getQuestions() {
         String[][] questions = new String[Engine.getCount()][2];
 
         final int boundForNum = 20;
@@ -31,6 +32,10 @@ public class Progression {
             numbers[hiddenNum] = "..";
             questions[i][0] = String.join(" ", numbers);
         }
-        Engine.runEngine(task, questions);
+        return questions;
+    }
+
+    public static void runProgression() {
+        Engine.runEngine(getTask(), getQuestions());
     }
 }

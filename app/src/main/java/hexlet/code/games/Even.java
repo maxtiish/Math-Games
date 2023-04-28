@@ -4,9 +4,11 @@ import java.util.Random;
 import hexlet.code.Engine;
 
 public class Even {
-    public static void runEven() {
-        var task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    public static String getTask() {
+        return "Answer 'yes' if the number is even, otherwise answer 'no'.";
+    }
 
+    public static String[][] getQuestions() {
         String[][] questions = new String[Engine.getCount()][2];
 
         final int bound = 1000;
@@ -21,7 +23,11 @@ public class Even {
                 questions[i][1] = "no";
             }
         }
-        Engine.runEngine(task, questions);
+        return questions;
+    }
+
+    public static void runEven() {
+        Engine.runEngine(getTask(), getQuestions());
     }
 }
 
