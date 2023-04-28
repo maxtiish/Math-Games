@@ -3,16 +3,15 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void prime() {
+    public static void runPrime() {
         var task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        final int numberOfTasks = 3;
-        String[][] questions = new String[numberOfTasks][2];
+        String[][] questions = new String[Engine.getCount()][2];
 
         final int from = 1;
         final int to = 100;
 
-        for (var count = 0; count < questions.length; count++) {
+        for (var count = 0; count < Engine.getCount(); count++) {
             var num = from + (int) (Math.random() * to);
             questions[count][0] = Integer.toString(num);
             questions[count][1] = "yes";
@@ -24,6 +23,6 @@ public class Prime {
                 }
             }
         }
-        Engine.engine(task, questions);
+        Engine.runEngine(task, questions);
     }
 }

@@ -6,21 +6,19 @@ import java.util.Random;
 import java.math.BigInteger;
 
 public class Gcd {
-    public static void gcd() {
+    public static void runGcd() {
         var task = "Find the greatest common divisor of given numbers.";
 
-        final int numberOfTasks = 3;
-        String[][] questions = new String[numberOfTasks][2];
+        String[][] questions = new String[Engine.getCount()][2];
 
-        final int bound = 100;
+        final int boundTo = 100;
+        final int boundFrom = 1;
 
-        var i = 0;
-
-        while (i < questions.length) {
+        for (var i = 0; i < Engine.getCount(); i++) {
             BigInteger result;
             final Random random = new Random();
-            var firstRandomNum = random.nextInt(bound);
-            var secondRandomNum = random.nextInt(bound);
+            var firstRandomNum = random.nextInt(boundFrom, boundTo);
+            var secondRandomNum = random.nextInt(boundFrom, boundTo);
 
             String firstNum = Integer.toString(firstRandomNum);
             String secondNum = Integer.toString(secondRandomNum);
@@ -30,8 +28,7 @@ public class Gcd {
 
             questions[i][1] = result.toString();
             questions[i][0] = firstNum + " " + secondNum;
-            i++;
         }
-        Engine.engine(task, questions);
+        Engine.runEngine(task, questions);
     }
 }

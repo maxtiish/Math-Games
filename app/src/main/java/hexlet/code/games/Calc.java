@@ -4,11 +4,10 @@ import hexlet.code.Engine;
 import java.util.Random;
 
 public class Calc {
-    public static void calc() {
+    public static void runCalc() {
         var task = "What is the result of the expression?";
 
-        final int numberOfTasks = 3;
-        String[][] questions = new String[numberOfTasks][2];
+        String[][] questions = new String[Engine.getCount()][2];
 
         char[] operations = {'+', '-', '*'};
 
@@ -16,7 +15,7 @@ public class Calc {
 
         var result = 0;
 
-        for (var i = 0; i < questions.length; i++) {
+        for (var i = 0; i < Engine.getCount(); i++) {
             final Random random = new Random();
             var randomOperation = random.nextInt(questions.length);
             var randomNum = random.nextInt(boundForNum);
@@ -33,6 +32,6 @@ public class Calc {
             }
             questions[i][1] = Integer.toString(result);
         }
-        Engine.engine(task, questions);
+        Engine.runEngine(task, questions);
     }
 }
