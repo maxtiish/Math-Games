@@ -7,7 +7,7 @@ import hexlet.code.games.Gcd;
 import hexlet.code.games.Prime;
 import java.util.Scanner;
 public class App {
-    static final int GREED_NUM = 1;
+    static final int GREET_NUM = 1;
     static final int EVEN_NUM = 2;
     static final int CALC_NUM = 3;
     static final int GCD_NUM = 4;
@@ -27,20 +27,20 @@ public class App {
         System.out.println("0 - Exit");
 
         System.out.print("Your choice: ");
-        int num = scanner.nextInt();
+        int choice = scanner.nextInt();
 
-        if (num == GREED_NUM) {
+        if (choice == GREET_NUM) {
             Cli.greeting();
-        } else if (num == EVEN_NUM) {
-            Even.even();
-        } else if (num == CALC_NUM) {
-            Calc.calc();
-        } else if (num == GCD_NUM) {
-            Gcd.gcd();
-        } else if (num == PROGRESSION_NUM) {
-            Progression.progression();
-        } else if (num == PRIME_NUM) {
-            Prime.prime();
+        } else if (choice == EVEN_NUM) {
+            Even.runEven();
+        } else if (choice == CALC_NUM) {
+            Calc.runCalc();
+        } else if (choice == GCD_NUM) {
+            Gcd.runGcd();
+        } else if (choice == PROGRESSION_NUM) {
+            Progression.runProgression();
+        } else if (choice == PRIME_NUM) {
+            Prime.runPrime();
         }
         scanner.close();
     }
