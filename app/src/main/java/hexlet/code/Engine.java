@@ -3,7 +3,7 @@ package hexlet.code;
 import java.util.Scanner;
 
 public final class Engine {
-    final static int COUNT = 3;
+    public static final int COUNT = 3;
     public static void runEngine(String task, String[][] questions) {
         Scanner name = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -28,7 +28,7 @@ public final class Engine {
                 return;
             }
         }
-            System.out.println("Congratulations, " + userName + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
     public static int getCount() {
         return COUNT;
