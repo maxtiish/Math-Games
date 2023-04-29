@@ -1,6 +1,8 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
+
 import java.util.Random;
 
 public class Progression {
@@ -10,24 +12,21 @@ public class Progression {
     public static String[][] getQuestions() {
         String[][] questions = new String[Engine.getCount()][2];
 
-        final int boundForNum = 20;
-        final int boundTo = 10;
-        final int boundFrom = 1;
+        final int progressionLength = 10;
 
         for (var i = 0; i < Engine.getCount(); i++) {
-            final Random random = new Random();
-            var firstNum = random.nextInt(boundForNum);
+            var firstNum = Utils.getRandomNumToTwenty();
             var algorithm = "";
-            var difference = random.nextInt(boundFrom, boundTo);
+            var difference = Utils.getRandomNumToTen();
 
-            for (var count = 0; count < boundTo; count++) {
+            for (var count = 0; count < progressionLength; count++) {
                 var nextNum = firstNum + difference;
                 algorithm += Integer.toString(nextNum) + " ";
                 firstNum = nextNum;
             }
             var numbers = algorithm.split(" ");
-            var boundForHiddenNum = numbers.length - 1;
-            var hiddenNum = random.nextInt(boundForHiddenNum);
+            var hiddenNum = Utils.getRandomNumToTen() - 1;
+
             questions[i][1] = numbers[hiddenNum];
             numbers[hiddenNum] = "..";
             questions[i][0] = String.join(" ", numbers);

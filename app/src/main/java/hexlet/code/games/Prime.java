@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Prime {
     public static String getTask() {
@@ -10,11 +11,8 @@ public class Prime {
     public static String[][] getQuestions() {
         String[][] questions = new String[Engine.getCount()][2];
 
-        final int from = 1;
-        final int to = 100;
-
         for (var count = 0; count < Engine.getCount(); count++) {
-            var num = from + (int) (Math.random() * to);
+            var num = Utils.getRandomNumToHundred();
             questions[count][0] = Integer.toString(num);
             questions[count][1] = "yes";
 

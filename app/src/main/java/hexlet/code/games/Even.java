@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
-import java.util.Random;
 import hexlet.code.Engine;
+import hexlet.code.Utils;
 
 public class Even {
     public static String getTask() {
@@ -11,11 +11,8 @@ public class Even {
     public static String[][] getQuestions() {
         String[][] questions = new String[Engine.getCount()][2];
 
-        final int bound = 1000;
-
         for (var i = 0; i < Engine.getCount(); i++) {
-            final Random random = new Random();
-            var num = random.nextInt(bound);
+            var num = Utils.getRandomNumToThousand();
             questions[i][0] = Integer.toString(num);
             if (num % 2 == 0) {
                 questions[i][1] = "yes";
