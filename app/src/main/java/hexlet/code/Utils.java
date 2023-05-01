@@ -3,33 +3,16 @@ package hexlet.code;
 import java.util.Random;
 
 public class Utils {
-    public static final int FROM = 1;
-    public static final int HUNDRED = 100;
-    public static final int THOUSAND = 1000;
-    public static final int TWENTY = 20;
-    public static final int TEN = 10;
-    public static int getRandomNumToHundred() {
+    public static int getRandomNumber(int bound) {
         final Random random = new Random();
-        var number = random.nextInt(FROM, HUNDRED);
+        var number = random.nextInt(bound);
         return number;
     }
 
-    public static int getRandomNumToThousand() {
+    public static int getRandomNumberFrom(int from, int to) {
         final Random random = new Random();
-        var number = random.nextInt(FROM, THOUSAND);
+        var number = random.nextInt(from, to);
         return number;
-    }
 
-    public static int getRandomNumToTwenty() {
-        final Random random = new Random();
-        var number = random.nextInt(FROM, TWENTY);
-        return number;
     }
-
-    public static int getRandomNumToTen() {
-        final Random random = new Random();
-        var number = random.nextInt(FROM, TEN);
-        return number;
-    }
-
 }
