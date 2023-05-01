@@ -24,26 +24,15 @@ public class App {
         int choice = scanner.nextInt();
 
         switch (choice) {
-            case GREET_NUM:
-                Cli.greeting();
-                break;
-            case EVEN_NUM:
-                Even.runEven();
-                break;
-            case CALC_NUM:
-                Calc.runCalc();
-                break;
-            case GCD_NUM:
-                Gcd.runGcd();
-                break;
-            case PROGRESSION_NUM:
-                Progression.runProgression();
-                break;
-            case PRIME_NUM:
-                Prime.runPrime();
-                break;
-            default:
-                break;
+            case GREET_NUM -> Cli.greeting();
+            case EVEN_NUM -> Even.runEven();
+            case CALC_NUM -> Calc.runCalc();
+            case GCD_NUM -> Gcd.runGcd();
+            case PROGRESSION_NUM -> Progression.runProgression();
+            case PRIME_NUM -> Prime.runPrime();
+            case 0 -> System.out.println("Goodbye!");
+            default -> throw new RuntimeException("Unexpected answer: " + choice);
         }
+        scanner.close();
     }
 }
