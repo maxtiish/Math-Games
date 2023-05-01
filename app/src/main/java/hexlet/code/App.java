@@ -23,7 +23,7 @@ public class App {
         System.out.print("Your choice: ");
         int choice = scanner.nextInt();
 
-        switch(choice) {
+        switch (choice) {
             case GREET_NUM:
                 Cli.greeting();
                 break;
@@ -41,6 +41,8 @@ public class App {
                 break;
             case PRIME_NUM:
                 Prime.runPrime();
+                break;
+            default:
                 break;
         }
     }
