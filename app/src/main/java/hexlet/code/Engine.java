@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public final class Engine {
     public static final int COUNT = 3;
+
     public static void runEngine(String task, String[][] questions) {
         Scanner name = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
@@ -19,7 +20,7 @@ public final class Engine {
             System.out.print("Your answer: ");
             String answer = scanner.next();
 
-            if (answer.equals(questions[i][1]))  {
+            if (answer.equals(questions[i][1])) {
                 System.out.println("Correct!");
             } else {
                 var text = "'" + answer + "' is wrong answer ;(. Correct answer was '" + questions[i][1] + "'.";
@@ -29,8 +30,5 @@ public final class Engine {
             }
         }
         System.out.println("Congratulations, " + userName + "!");
-    }
-    public static int getCount() {
-        return COUNT;
     }
 }
