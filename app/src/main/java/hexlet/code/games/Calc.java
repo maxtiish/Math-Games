@@ -29,8 +29,8 @@ public class Calc {
             var randomIndex = Utils.getRandomNumber(operations.length - 1);
             var operation = operations[randomIndex];
 
-            var randomNum = Utils.getRandomNumberFrom(1, 20);
-            var secondRandomNum = Utils.getRandomNumberFrom(1, 20);
+            var randomNum = Utils.getRandomNumberFrom(FROM, TO);
+            var secondRandomNum = Utils.getRandomNumberFrom(FROM, TO);
 
             var text = Integer.toString(randomNum) + " " + operation + " " + (secondRandomNum);
             questions[i][0] = text;

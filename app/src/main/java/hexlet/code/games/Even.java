@@ -15,7 +15,7 @@ public class Even {
         String[][] questions = new String[Engine.COUNT][2];
 
         for (var i = 0; i < Engine.COUNT; i++) {
-            var num = Utils.getRandomNumber(1000);
+            var num = Utils.getRandomNumber(BOUND);
             questions[i][0] = Integer.toString(num);
             questions[i][1] = isEven(num) ? "yes" : "no";
         }

@@ -22,8 +22,8 @@ public class Gcd {
         String[][] questions = new String[Engine.COUNT][2];
 
         for (var i = 0; i < Engine.COUNT; i++) {
-            var firstRandomNum = Utils.getRandomNumberFrom(1, 100);
-            var secondRandomNum = Utils.getRandomNumberFrom(1, 100);
+            var firstRandomNum = Utils.getRandomNumberFrom(FROM, TO);
+            var secondRandomNum = Utils.getRandomNumberFrom(FROM, TO);
 
             String firstNum = Integer.toString(firstRandomNum);
             String secondNum = Integer.toString(secondRandomNum);

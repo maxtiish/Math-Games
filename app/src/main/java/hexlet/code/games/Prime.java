@@ -22,7 +22,7 @@ public class Prime {
         String[][] questions = new String[Engine.COUNT][2];
 
         for (var count = 0; count < Engine.COUNT; count++) {
-            var num = Utils.getRandomNumberFrom(1, 100);
+            var num = Utils.getRandomNumberFrom(FROM, TO);
             questions[count][0] = Integer.toString(num);
             questions[count][1] = isPrime(num) ? "yes" : "no";
         }

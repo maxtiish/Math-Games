@@ -28,8 +28,8 @@ public class Progression {
 
 
         for (var i = 0; i < Engine.COUNT; i++) {
-            var firstNum = Utils.getRandomNumber(20);
-            var difference = Utils.getRandomNumberFrom(1, 10);
+            var firstNum = Utils.getRandomNumber(BOUND);
+            var difference = Utils.getRandomNumberFrom(FROM, TO);
 
             var progression = makeProgression(firstNum, difference);
             var hiddenNum = Utils.getRandomNumberFrom(1, progression.length - 1);
