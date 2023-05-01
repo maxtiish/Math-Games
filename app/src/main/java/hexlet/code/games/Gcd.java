@@ -6,32 +6,35 @@ import hexlet.code.Utils;
 import java.math.BigInteger;
 
 public class Gcd {
-    public static String getTask() {
-        return "Find the greatest common divisor of given numbers.";
+    public static final String TASK = "Find the greatest common divisor of given numbers.";
+    public static final int FROM = 1;
+    public static final int TO = 100;
+
+    public static String gcd(int firstNum, int secondNum) {
+        BigInteger result;
+        BigInteger a = new BigInteger(Integer.toString(firstNum));
+        BigInteger b = new BigInteger(Integer.toString(secondNum));
+        result = a.gcd(b);
+        return result.toString();
     }
 
     public static String[][] getQuestions() {
-        String[][] questions = new String[Engine.getCount()][2];
+        String[][] questions = new String[Engine.COUNT][2];
 
-        for (var i = 0; i < Engine.getCount(); i++) {
-            var firstRandomNum = Utils.getRandomNumToHundred();
-            var secondRandomNum = Utils.getRandomNumToHundred();
+        for (var i = 0; i < Engine.COUNT; i++) {
+            var firstRandomNum = Utils.getRandomNumberFrom(1, 100);
+            var secondRandomNum = Utils.getRandomNumberFrom(1, 100);
 
             String firstNum = Integer.toString(firstRandomNum);
             String secondNum = Integer.toString(secondRandomNum);
 
-            BigInteger result;
-            BigInteger a = new BigInteger(firstNum);
-            BigInteger b = new BigInteger(secondNum);
-            result = a.gcd(b);
-
-            questions[i][1] = result.toString();
             questions[i][0] = firstNum + " " + secondNum;
+            questions[i][1] = gcd(firstRandomNum, secondRandomNum);
         }
         return questions;
     }
 
     public static void runGcd() {
-        Engine.runEngine(getTask(), getQuestions());
+        Engine.runEngine(TASK, getQuestions());
     }
 }

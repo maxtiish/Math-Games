@@ -3,41 +3,43 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.util.Random;
-
 public class Calc {
-    public static String getTask() {
-        return "What is the result of the expression?";
-    }
+    public static final String TASK = "What is the result of the expression?";
+    public static final int FROM = 1;
+    public static final int TO = 20;
 
+    public static int calculate(int firstNum, int secondNum, char operation) {
+        var result = 0;
+
+        if (operation == '+') {
+            result = firstNum + secondNum;
+        } else if (operation == '-') {
+            result = firstNum - secondNum;
+        } else {
+            result = firstNum * secondNum;
+        }
+        return result;
+    }
     public static String[][] getQuestions() {
-        String[][] questions = new String[Engine.getCount()][2];
+        String[][] questions = new String[Engine.COUNT][2];
 
         char[] operations = {'+', '-', '*'};
 
-        var result = 0;
+        for (var i = 0; i < Engine.COUNT; i++) {
+            var randomIndex = Utils.getRandomNumber(operations.length - 1);
+            var operation = operations[randomIndex];
 
-        for (var i = 0; i < Engine.getCount(); i++) {
-            final Random random = new Random();
-            var randomOperation = random.nextInt(operations.length);
-            var randomNum = Utils.getRandomNumToTwenty();
-            var secondRandomNum = Utils.getRandomNumToTwenty();
+            var randomNum = Utils.getRandomNumberFrom(1, 20);
+            var secondRandomNum = Utils.getRandomNumberFrom(1, 20);
 
-            var text = Integer.toString(randomNum) + " " + operations[randomOperation] + " " + (secondRandomNum);
+            var text = Integer.toString(randomNum) + " " + operation + " " + (secondRandomNum);
             questions[i][0] = text;
 
-            if (randomOperation == 0) {
-                result = randomNum + secondRandomNum;
-            } else if (randomOperation == 1) {
-                result = randomNum - secondRandomNum;
-            } else {
-                result = randomNum * secondRandomNum;
-            }
-            questions[i][1] = Integer.toString(result);
+            questions[i][1] = Integer.toString(calculate(randomNum, secondRandomNum, operation));
         }
         return questions;
     }
     public static void runCalc() {
-        Engine.runEngine(getTask(), getQuestions());
+        Engine.runEngine(TASK, getQuestions());
     }
 }
