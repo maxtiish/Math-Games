@@ -4,15 +4,11 @@ import java.util.Random;
 
 public class Utils {
     public static int getRandomNumber(int bound) {
-        final Random random = new Random();
-        var number = random.nextInt(bound);
-        return number;
+        return getRandomNumberFrom(0, bound);
     }
 
     public static int getRandomNumberFrom(int from, int to) {
-        final Random random = new Random();
-        var number = random.nextInt(from, to);
-        return number;
+        return new Random().nextInt(from, to);
 
     }
 }
