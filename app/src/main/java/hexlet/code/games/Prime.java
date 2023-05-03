@@ -5,10 +5,14 @@ import hexlet.code.Utils;
 
 public class Prime {
     public static final String TASK = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static final int FROM = 1;
+    public static final int FROM = 0;
     public static final int TO = 100;
 
     public static boolean isPrime(int number) {
+        if (number < 2) {
+            return false;
+        }
+
         for (var i = 2; i < number; i++) {
             if (number % i == 0) {
                 return false;
@@ -16,7 +20,6 @@ public class Prime {
         }
         return true;
     }
-
 
     public static String[][] getQuestions() {
         String[][] questions = new String[Engine.COUNT][2];
@@ -28,6 +31,7 @@ public class Prime {
         }
         return questions;
     }
+
     public static void runPrime() {
         Engine.runEngine(TASK, getQuestions());
     }

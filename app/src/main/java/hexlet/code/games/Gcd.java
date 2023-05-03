@@ -3,7 +3,6 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-import java.math.BigInteger;
 
 public class Gcd {
     public static final String TASK = "Find the greatest common divisor of given numbers.";
@@ -11,11 +10,14 @@ public class Gcd {
     public static final int TO = 100;
 
     public static String gcd(int firstNum, int secondNum) {
-        BigInteger result;
-        BigInteger a = new BigInteger(Integer.toString(firstNum));
-        BigInteger b = new BigInteger(Integer.toString(secondNum));
-        result = a.gcd(b);
-        return result.toString();
+        var commonDivisor = 0;
+        var min = Math.min(firstNum, secondNum);
+        for (var i = 1; i <= min; i++) {
+            if (firstNum % i == 0 && secondNum % i == 0) {
+                commonDivisor = i;
+            }
+        }
+        return Integer.toString(commonDivisor);
     }
 
     public static String[][] getQuestions() {
