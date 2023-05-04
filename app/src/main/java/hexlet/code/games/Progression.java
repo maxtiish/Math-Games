@@ -31,11 +31,17 @@ public class Progression {
 
             var hiddenNumber = Utils.getRandomNumber(progression.length - 1);
             questions[i][1] = String.valueOf(progression[hiddenNumber]);
-            var progressionToString = Arrays.toString(progression)
-                    .replaceAll("[\\[\\]]", "")
-                    .replaceAll(",", "");
-            questions[i][0] = progressionToString.replace(questions[i][1], "..");
 
+            var stringProgression = new String[progression.length];
+            for (var j = 0; j < progression.length; j++) {
+                stringProgression[j] = String.valueOf(progression[j]);
+                if (j == hiddenNumber) {
+                    stringProgression[j] = "..";
+                }
+            }
+            questions[i][0] = Arrays.toString(stringProgression).
+                    replaceAll("\\[|]", "")
+                    .replaceAll(",", "");
         }
         return questions;
     }
