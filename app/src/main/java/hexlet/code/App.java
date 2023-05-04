@@ -1,7 +1,10 @@
 package hexlet.code;
 
-import hexlet.code.games.*;
-
+import hexlet.code.games.Gcd;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.Prime;
+import hexlet.code.games.Progression;
 import java.util.Scanner;
 public class App {
     static final int GREET_NUM = 1;
