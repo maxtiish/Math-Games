@@ -3,13 +3,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Utils;
 
-
 public class Gcd {
     public static final String TASK = "Find the greatest common divisor of given numbers.";
     public static final int FROM = 1;
     public static final int TO = 100;
 
-    public static String gcd(int firstNum, int secondNum) {
+    public static int gcd(int firstNum, int secondNum) {
         var commonDivisor = 0;
         var min = Math.min(firstNum, secondNum);
         for (var i = 1; i <= min; i++) {
@@ -17,7 +16,7 @@ public class Gcd {
                 commonDivisor = i;
             }
         }
-        return Integer.toString(commonDivisor);
+        return commonDivisor;
     }
 
     public static String[][] getQuestions() {
@@ -31,7 +30,7 @@ public class Gcd {
             String secondNum = Integer.toString(secondRandomNum);
 
             questions[i][0] = firstNum + " " + secondNum;
-            questions[i][1] = gcd(firstRandomNum, secondRandomNum);
+            questions[i][1] = Integer.toString(gcd(firstRandomNum, secondRandomNum));
         }
         return questions;
     }
