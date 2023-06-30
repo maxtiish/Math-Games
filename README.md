@@ -3,12 +3,12 @@
 ### Maintainability:
 [![Maintainability](https://api.codeclimate.com/v1/badges/49aa2f80b7daad69c6ca/maintainability)](https://codeclimate.com/github/maxtiish/java-project-61/maintainability)
 ### Game 'Even':
-https://asciinema.org/a/Gm6xYjw7MKFy9pGvQgUGlBXts
+[![asciicast](https://asciinema.org/a/fHX2oAC3T7ECY2vi1sbKznKEG.svg)](https://asciinema.org/a/fHX2oAC3T7ECY2vi1sbKznKEG)
 ### Game 'Calc':
-https://asciinema.org/a/x4NmwRrcbJlzVNt3RHWQdLUO0
+[![asciicast](https://asciinema.org/a/dwoQQV1l8lTzv5fVwnFZw4JZV.svg)](https://asciinema.org/a/dwoQQV1l8lTzv5fVwnFZw4JZV)
 ### Game 'GCD':
-https://asciinema.org/a/fZtyakY1mKcM6Ze4YXpXeIYiC
+[![asciicast](https://asciinema.org/a/xM3FCzm7IXWqUhg6Uj5M3FL7L.svg)](https://asciinema.org/a/xM3FCzm7IXWqUhg6Uj5M3FL7L)
 ### Game 'Progression':
-https://asciinema.org/a/6uDHl3dLIRDO9DPXqLKG16ILU
+[![asciicast](https://asciinema.org/a/5UyI3DlNRzUGCVV0MJXNziGox.svg)](https://asciinema.org/a/5UyI3DlNRzUGCVV0MJXNziGox)
 ### Game 'Prime':
-https://asciinema.org/a/TGpVlKJ7f0x6ka6E8KqEjoDto
+[![asciicast](https://asciinema.org/a/9Nl20Zxq4ErdEOA1RuyscDGtt.svg)](https://asciinema.org/a/9Nl20Zxq4ErdEOA1RuyscDGtt)
